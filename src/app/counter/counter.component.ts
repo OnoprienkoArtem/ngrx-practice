@@ -17,7 +17,7 @@ export class CounterComponent implements OnInit {
     this.count$ = store.pipe(select('count'));
   }
 
-  increment() {
+  increment() {   
     this.store.dispatch(new Increment());
   }
 
@@ -28,7 +28,7 @@ export class CounterComponent implements OnInit {
   reset() {
     this.store.dispatch(new Reset());
   }
-  
+
 
   ngOnInit() {
   }
