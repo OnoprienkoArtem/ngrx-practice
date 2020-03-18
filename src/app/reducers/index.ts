@@ -5,15 +5,15 @@ import {
   createSelector,
   MetaReducer
 } from '@ngrx/store';
-import { CountState, countReducer } from './count/count.reducer';
+import { countNode, CountState, countReducer } from './count/count.reducer';
 import { environment } from '../../environments/environment';
 
 export interface State {
-  count: CountState;
+  [countNode]: CountState;
 }
 
 export const reducers: ActionReducerMap<State> = {
-  count: countReducer
+  [countNode]: countReducer
 };
 
 export const metaReducers: MetaReducer<State>[] = !environment.production ? [] : [];
