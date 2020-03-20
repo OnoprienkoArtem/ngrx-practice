@@ -17,3 +17,5 @@ export class CountDecreaseAction implements Action {
 export class CountClearAction implements Action {
   readonly type = countActionsType.clear;
 }
+
+export type CountActions = CountIncreaseAction | CountDecreaseAction | CountClearAction;

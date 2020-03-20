@@ -1,3 +1,5 @@
+import { CountActions } from './count.action';
+
 export const countNode = 'count';
 
 export interface CountState {
@@ -10,6 +12,6 @@ const initialState = {
   updatedAt: Date.now()
 };
 
-export const countReducer = (state = initialState, action) => {
+export const countReducer = (state = initialState, action: CountActions) => {
   return state;
 };
