@@ -1,4 +1,4 @@
-import { CountActions } from './count.action';
+import { CountActions, countActionsType} from './count.action';
 
 export const countNode = 'count';
 
@@ -13,5 +13,23 @@ const initialState = {
 };
 
 export const countReducer = (state = initialState, action: CountActions) => {
-  return state;
+  switch (action.type) {
+    case countActionsType.increase:
+      return {
+        ...state,
+        count: state.count + 1
+      };
+    case countActionsType.decrease:
+      return {
+        ...state,
+        count: state.count - 1
+      };
+    case countActionsType.clear:
+      return {
+        ...state,
+        count: 0
+      };
+    default:
+      return state;
+  }
 };
