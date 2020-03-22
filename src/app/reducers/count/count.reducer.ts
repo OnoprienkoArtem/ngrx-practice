@@ -1,4 +1,4 @@
-import { CountActions, countActionsType} from './count.action';
+import { CountActions, countActionsType } from './count.action';
 
 export const countNode = 'count';
 
