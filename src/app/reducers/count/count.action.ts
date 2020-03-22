@@ -3,7 +3,8 @@ import { Action } from '@ngrx/store';
 export enum countActionsType {
   increase = '[COUNT] increase',
   decrease = '[COUNT] decrease',
-  clear = '[COUNT] clear'
+  clear = '[COUNT] clear',
+  updatedAt = '[COUNT] updated at'
 }
 
 export class CountIncreaseAction implements Action {
@@ -18,4 +19,11 @@ export class CountClearAction implements Action {
   readonly type = countActionsType.clear;
 }
 
-export type CountActions = CountIncreaseAction | CountDecreaseAction | CountClearAction;
+export class CountUpdatedAtAction implements Action {
+  readonly type = countActionsType.updatedAt;
+}
+
+export type CountActions = CountIncreaseAction
+  | CountDecreaseAction
+  | CountClearAction
+  | CountUpdatedAtAction;
