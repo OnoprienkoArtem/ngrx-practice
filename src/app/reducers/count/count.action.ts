@@ -21,6 +21,9 @@ export class CountClearAction implements Action {
 
 export class CountUpdatedAtAction implements Action {
   readonly type = countActionsType.updatedAt;
+  constructor(public payload: {
+    updatedAt: number;
+  }) {}
 }
 
 export type CountActions = CountIncreaseAction
